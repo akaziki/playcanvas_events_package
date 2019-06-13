@@ -35,10 +35,7 @@ EventsPackage.prototype.pickInstance = function(event) {
 
   // Map the mouse coordinates into picker coordinates and
   // query the selection
-  var selected = picker.getSelection({
-    x: Math.floor(event.x * (picker.width / this.canvasWidth)),
-    y: picker.height - Math.floor(event.y * (picker.height / this.canvasHeight))
-  })
+  var selected = picker.getSelection(event.x, event.y)
 
   if (selected.length > 0) {
     // Get the graph node used by the selected mesh instance

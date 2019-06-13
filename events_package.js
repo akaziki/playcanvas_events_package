@@ -15,9 +15,6 @@ EventsPackage.prototype.initialize = function() {
   this.app.mouse.on(pc.EVENT_MOUSEUP, this.onMouseUp, this)
   this.app.mouse.on(pc.EVENT_MOUSEWHEEL, this.onMouseWheel, this)
 
-  this.app.keyboard.on(pc.EVENT_KEYDOWN, this.onKeyDown, this)
-  this.app.keyboard.on(pc.EVENT_KEYUP, this.onKeyUp, this)
-
   if (this.app.touch) {
     this.app.touch.on(pc.EVENT_TOUCHSTART, this.onTouchStart, this)
     this.app.touch.on(pc.EVENT_TOUCHEND, this.onTouchEnd, this)
@@ -61,8 +58,6 @@ EventsPackage.prototype.pickInstance = function(event) {
   }
 }
 
-//mouse
-
 EventsPackage.prototype.onMouseMove = function(event) {
   this.pickInstance(event)
 }
@@ -76,16 +71,6 @@ EventsPackage.prototype.onMouseUp = function(event) {
 }
 
 EventsPackage.prototype.onMouseWheel = function(event) {
-  this.pickInstance(event)
-}
-
-//keyboard
-
-EventsPackage.prototype.onKeyDown = function(event) {
-  this.pickInstance(event)
-}
-
-EventsPackage.prototype.onKeyUP = function(event) {
   this.pickInstance(event)
 }
 

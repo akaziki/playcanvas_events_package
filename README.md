@@ -9,7 +9,7 @@
 #### 具体：
 
 ```
-this.entity.on('event:mousedown',function(event){
+this.entity.on('event:EVENT_MOUSEDOWN',function(event){
   //do something
 })
 ```
@@ -18,8 +18,8 @@ this.entity.on('event:mousedown',function(event){
 
 #### 鼠标：
 
-mousedown， mouseup， mousemove， mousewheel
+'EVENT_MOUSEDOWN','EVENT_MOUSEMOVE','EVENT_MOUSEMOVE','EVENT_MOUSEWHEEL'
 
 #### 手机 touch：
 
-touchstart, touchend, touchmove, touchcancel
+'EVENT_TOUCHSTART','EVENT_TOUCHMOVE','EVENT_TOUCHEND','EVENT_TOUCHCANCEL'
